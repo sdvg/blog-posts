@@ -1,24 +1,24 @@
 # tidyMind - An introduction
 
-I use [Evernote][evernote] everyday, as my main note-taking app, as a place to put things off my mind. I like it a lot
-and have been using it for the last 4.5 years.
+I use [Evernote][evernote] every day, as my main note-taking app and as a place to unload things from my mind. I like it
+a lot and have been using it for the last 4.5 years.
 
-But there are some things that I miss and think I could do better 🙃.
+But there are some features that I miss and think I could do better 🙃.
 
-Let's start with what I use Evernote for:
+Let's start with what I use Evernote for...
 
-On the personal side I have to do lists, a shopping list, notes about software projects, my server documentation,
+Personal side there is: I have to do lists, a shopping list, notes about software projects, my server documentation,
 recipes (and some notes about how to cook food in general 😋), ideas for projects and blog posts, a bunch of (check)
 lists for packing, festivals, moving, skiing, things to check out on vacations, movies to watch, gift ideas, stuff I'd
 like to learn, and so on.
 
 At work I try to document most of the things in [Confluence][confluence] so it helps everybody 😇. But I have some notes
-about tickets I am working on (if I think about something that my current ticket I write it down immediately, so it's
-out of my mind and I don't forget it.)
+about tickets I am working on (if I think about something related to my current ticket I write it down immediately, so
+it's out of my mind and before I forget.)
 But I also keep there some early ideas which are not yet ready to be discussed in the team, a list of lunch options
 around the office and a journal where I write down what I worked on every day.
 
-Feature that I use and like are the great "Switch to" shortcut, the synchronization between devices, the web client
+Features that I use and like are the great "Switch to" shortcut, synchronization between devices, the web client
 (for personal stuff, when I'm at work), categories and stacks and a lot of features from the rich text editor
 (especially lists and checkboxes).
 
@@ -86,7 +86,7 @@ work:
 One big thing I will live without in the beginning is a mobile view 😬. The UI between desktop and mobile is quite
 different, so I will leave this to do a bit later.
 
-### State of the project
+### Current state of the project
 
 * Sign Up, Sign In and Sign Out work 👍
 * Change password is to do (this is a bit tricky because of the encryption)

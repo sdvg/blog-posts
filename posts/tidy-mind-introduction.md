@@ -14,7 +14,7 @@ like to learn, and so on.
 
 At work I try to document most of the things in [Confluence][confluence] so it helps everybody 😇. But I have some notes
 about tickets I am working on (if I think about something related to my current ticket I write it down immediately, so
-it's out of my mind and before I forget.)
+it's out of my mind and I don't forget it.)
 But I also keep there some early ideas which are not yet ready to be discussed in the team, a list of lunch options
 around the office and a journal where I write down what I worked on every day.
 
@@ -22,8 +22,8 @@ Features that I use and like are the great "Switch to" shortcut, synchronization
 (for personal stuff, when I'm at work), categories and stacks and a lot of features from the rich text editor
 (especially lists and checkboxes).
 
-I also tried a few alternatives: [Bear][bear] looks amazing, but I'm missing a lot of features, especially a better
-organization of documents.
+I also tried a few alternatives: [Bear][bear] looks amazing, but for me it is missing a lot of features, especially a
+better organization of documents.
 
 With [Quiver][quiver] I like, that it has more than one document type (Markdown, Code, Latex, Diagrams), but that alone
 is no real improvement over Evernote for me.

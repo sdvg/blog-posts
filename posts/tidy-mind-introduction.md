@@ -35,7 +35,7 @@ checkboxes in a document. But again, it's lacking some features I'd like to have
 So, as you might have realized by now, I want to create my own notes app. I've already been working on it on-and-off
 since spring this year. The working title is **tidyMind**.
 
-Here come the features I want to have in my app, starting with those which are supposed to make tidyMind special:
+Here come the features I want to have in my app, starting with those which are supposed to make tidyMind special...
 
 ### Client-side encryption
 

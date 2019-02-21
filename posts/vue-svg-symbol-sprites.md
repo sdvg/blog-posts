@@ -1,4 +1,7 @@
-# Using SVG symbol sprites with Vue
+---
+title: Using SVG symbol sprites with Vue
+date: 2019-02-22
+---
 
 I recently compared the most popular methods of embedding icons in web application and came to the conclusion, that SVG symbols are probably the best solution in 2019.
 

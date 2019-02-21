@@ -1,4 +1,7 @@
-# tidyMind - An introduction
+---
+title: tidyMind - An introduction
+date: 2018-11-27
+---
 
 I use [Evernote][evernote] every day, as my main note-taking app and as a place to unload things from my mind. I like it
 a lot and have been using it for the last 4.5 years.

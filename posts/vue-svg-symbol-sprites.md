@@ -43,6 +43,12 @@ The plugin and loader combination I use is [svg-symbol-sprite-loader][svg-symbol
 
 This is how to set it up with Vue:
 
+## Install dependency
+
+```
+npm i -D svg-symbol-sprite-loader
+```
+
 ## Webpack configuration
 
 You will need a Webpack configuration which uses `html-webpack-loader`. This is necessary because the plugin uses a hook of html-webpack-loader to insert the filename of the generated sprite image into the HTML, to be picked up by the script which loads and caches it later.
@@ -68,7 +74,7 @@ module.exports = {
   },
   plugins: [
     // ⚠️ must be included _after_ the HtmlWebpackPlugin
-    new new SVGSymbolSprite.Plugin({
+    new SVGSymbolSprite.Plugin({
       filename: `icon-sprite${process.env.NODE_ENV === 'production' ? '.[chunkhash]' : ''}.svg`
     }),
   ],
@@ -113,10 +119,10 @@ The Vue component should import all necessary icons and expose a simple API to i
         type: String,
         required: true,
         validate: name => Object.keys(iconMap).includes(name),
-      }
+      },
     },
     computed: {
-      iconId() {
+      iconId () {
         return iconMap[this.name]
       },
     },

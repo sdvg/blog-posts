@@ -1,4 +1,7 @@
-# tidyMind - An introduction
+---
+title: tidyMind - An introduction
+date: 2018-11-27
+---
 
 I use [Evernote][evernote] every day, as my main note-taking app and as a place to unload things from my mind. I like it
 a lot and have been using it for the last 4.5 years.
@@ -99,6 +102,8 @@ know how to do it.
 
 Perhaps I will give some updates here about the progress 🙂
 
+Thanks to [Ben][ben] for reviewing this!
+
 [web-crypto]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API
 [confluence]: https://www.atlassian.com/software/confluence
 [evernote]: https://evernote.com/
@@ -108,3 +113,4 @@ Perhaps I will give some updates here about the progress 🙂
 [pouchdb]: https://pouchdb.com/
 [tinymce]: https://www.tiny.cloud/
 [slate]: https://github.com/ianstormtaylor/slate
+[ben]: https://github.com/bamarch

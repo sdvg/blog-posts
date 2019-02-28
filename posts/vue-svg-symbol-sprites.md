@@ -161,6 +161,40 @@ File loader: `test: /.((?<!icon.)svg|png|jpg|gif|ico|eot|ttf|woff2?)$/`
 
 This uses a negative lookbehind operator which matches `*.svg` but not `*.icon.svg`.
 
+## Bonus: Use it with Vue CLI
+
+When using Vue CLI you can't configure Webpack directly. But it allows you to manipulate and extend the config using [webpack-chain][webpack-chain].
+
+Just create a `vue.config.js` file with the following content:
+
+```
+const path = require('path')
+const SVGSymbolSprite = require('svg-symbol-sprite-loader')
+
+module.exports = {
+  chainWebpack: config => {
+    config
+      .plugin('svg-symbol-sprite-loader')
+      .after('html')
+      .use(SVGSymbolSprite.Plugin)
+      .end();
+
+    const svgRule = config.module.rule('svg')
+
+    svgRule.uses.clear()
+
+    svgRule
+      .use('svg-symbol-sprite-loader')
+      .loader('svg-symbol-sprite-loader')
+      .options({
+        symbolId: filePath => `icon-${path.basename(filePath, '.svg')}`,
+      })
+  }
+}
+```
+
+I put together a small demo project which does this and which also includes the component: [sdvg/vue-cli-svg-symbol-sprite][cli-demo].
+
 Got any questions or problems with this? Write me [an email][email] or on [Twitter][twitter] 🙂  
 Found an mistake in this post? Write me an issue or send a PR on GitHub: [sdvg/blog-posts][github]
 
@@ -175,3 +209,5 @@ Found an mistake in this post? Write me an issue or send a PR on GitHub: [sdvg/b
 [email]: mailto:mail@stefan-dietz.eu
 [twitter]: https://twitter.com/sd_vg
 [github]: https://github.com/sdvg/blog-posts/
+[webpack-chain]: https://github.com/neutrinojs/webpack-chain
+[cli-demo]: https://github.com/sdvg/vue-cli-svg-symbol-sprite

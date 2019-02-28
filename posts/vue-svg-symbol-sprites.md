@@ -8,8 +8,8 @@ I recently compared the most popular methods of embedding icons in web applicati
 Other options are:
 
 * Icon Fonts, which usually work fine but are a bit difficult to maintain because you have to regenerate binary font files every time you add or change an icon. Also in my experience they sometimes fail to load in mysterious ways.
-* Inline SVGs are convenient to implement and work with but can't be reused within a project and blow up the HTML, which can be annoying during development and can also hurt performance in the browser, especially when being repeated in long lists.
-* Component files are equally convenient to use as inline SVGs and can be reused within a project. They are are great solution for dynamic graphics where you want to toggle single paths for example. But they are also hard to cache and can cause performance issues when repeated too often.  
+* Inline SVGs are easy to implement and to work with but can't be reused within a project and blow up the HTML, which can be annoying during development and can also hurt performance in the browser, especially when being repeated in long lists.
+* Component files are equally handy to use as inline SVGs and can be reused within a project. They are great solution for dynamic graphics where you want to toggle single paths for example. But they are also hard to cache and can cause performance issues when repeated too often.  
 * Lazy-loaded SVGs, as in HTML `<img>` tags and in CSS `background-image`s are a good solution for bigger and static graphics. They can easily be cached in the browser, but can't be modified, like change the color using the CSS `fill` property.
 
 SVG symbols on the other hand can be cached with a little effort, reused, are accessible for CSS modifications and don't hurt the performance.
@@ -35,7 +35,7 @@ The SVG won't be shown at this place, but provides symbols to be used in other S
 ```
 
 Now you could just have a big file where you manually add the `<symbol>` tags and this would work just fine.  
-But there is more convenient way by using a Webpack loader which allows you to use your original `.svg` files just by importing them without any modifications or copy-pasting parts of them around. It also provides a simple way to fetch the sprite image and cache it in localStorage, which makes sense for sprite images of a certain size.
+But there is more user-friendly way by using a Webpack loader which allows you to use your original `.svg` files just by importing them without any modifications or copy-pasting parts of them around. It also provides a simple way to fetch the sprite image and cache it in localStorage, which makes sense for sprite images of a certain size.
 
 I use Vue.js for both work and my side-project [tidyMind][tidymind-intro] and implemented the following solution into both of them. It should be easily adjustable for other frameworks / libraries like React or Angular as well.
 
@@ -87,7 +87,7 @@ You can also consult the [official documentation][webpack-config] for this part.
 
 ## Load and cache the sprite file
 
-[svg-symbol-sprite-loader][svg-symbol-sprite-loader] conveniently provides a function which you just need to call to fetch and cache the sprite image:
+[svg-symbol-sprite-loader][svg-symbol-sprite-loader] already provides a function which you just need to call to fetch and cache the sprite image:
 
 ```
 import svgSymbolSpriteLoader from 'svg-symbol-sprite-loader'
@@ -97,7 +97,7 @@ svgSymbolSpriteLoader({ useCache: process.env.NODE_ENV === 'production' })
 
 Just be aware that this uses the [Fetch API][fetch-api] which is not supported by Internet Explorer.
 
-If you need to support IE, you can either import a [fetch polyfill][fetch-polyfill] or copy and adapt [the function][icon-sprite-loader] to the HTTP client you use. The latter is what I did for my work projects where we support IE, already have bundled [Superagent][superagent] as a HTTP client and did not want to increase the bundle size by including a polyfill which is otherwise not needed.
+If you need to support IE, you can either import a [fetch polyfill][fetch-polyfill] or copy and adapt [the function][icon-sprite-loader] to the HTTP client you use. I have done the latter for my work projects. Since IE is supported there and [Superagent][superagent] is already bundled as HTTP client, we didn't want to increase the bundle size by an otherwise not needed polyfill.
    
 ## Create a Vue component
 
@@ -197,6 +197,8 @@ I put together a small demo project which does this and which also includes the 
 
 Got any questions or problems with this? Write me [an email][email] or on [Twitter][twitter] 🙂  
 Found an mistake in this post? Write me an issue or send a PR on GitHub: [sdvg/blog-posts][github]
+
+Thanks to [Alex][alex] for reviewing this!
 
 [tidymind-intro]: tidy-mind-introduction.html
 [collisions]: https://github.com/crystal-ball/svg-symbol-sprite-loader/issues/27

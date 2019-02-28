@@ -1,6 +1,6 @@
 ---
 title: Using SVG symbol sprites with Vue
-date: 2019-02-22
+date: 2019-02-28
 ---
 
 I recently compared the most popular methods of embedding icons in web application and came to the conclusion, that SVG symbols are probably the best solution in 2019.
@@ -10,9 +10,9 @@ Other options are:
 * Icon Fonts, which usually work fine but are a bit difficult to maintain because you have to regenerate binary font files every time you add or change an icon. Also in my experience they sometimes fail to load in mysterious ways.
 * Inline SVGs are easy to implement and to work with but can't be reused within a project and blow up the HTML, which can be annoying during development and can also hurt performance in the browser, especially when being repeated in long lists.
 * Component files are equally handy to use as inline SVGs and can be reused within a project. They are great solution for dynamic graphics where you want to toggle single paths for example. But they are also hard to cache and can cause performance issues when repeated too often.  
-* Lazy-loaded SVGs, as in HTML `<img>` tags and in CSS `background-image`s are a good solution for bigger and static graphics. They can easily be cached in the browser, but can't be modified, like change the color using the CSS `fill` property.
+* Lazy-loaded SVGs, as in HTML `<img>` tags and in CSS `background-image`s are a good solution for bigger and static graphics. They can easily be cached in the browser, but can't be manipulated, like changing the color using a CSS `fill` property.
 
-SVG symbols on the other hand can be cached with a little effort, reused, are accessible for CSS modifications and don't hurt the performance.
+SVG symbols on the other hand can be cached with a little effort, be reused, are accessible for CSS modifications and don't hurt the performance.
 
 The idea is to have one big SVG image in your HTML body which looks like this:
 
@@ -195,7 +195,7 @@ module.exports = {
 
 I put together a small demo project which does this and which also includes the component: [sdvg/vue-cli-svg-symbol-sprite][cli-demo].
 
-Got any questions or problems with this? Write me [an email][email] or on [Twitter][twitter] 🙂  
+Got any questions or problems with this? Write me [an email][email] or a message on [Twitter][twitter] 🙂  
 Found an mistake in this post? Write me an issue or send a PR on GitHub: [sdvg/blog-posts][github]
 
 Thanks to [Alex][alex] for reviewing this!

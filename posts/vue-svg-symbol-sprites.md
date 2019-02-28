@@ -16,7 +16,7 @@ SVG symbols on the other hand can be cached with a little effort, be reused, are
 
 The idea is to have one big SVG image in your HTML body which looks like this:
 
-```
+```xml
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
   <symbol viewBox="0 0 1792 1792" id="icon-unicorn">
     <!-- paths and shapes -->
@@ -28,7 +28,7 @@ The idea is to have one big SVG image in your HTML body which looks like this:
 
 The SVG won't be shown at this place, but provides symbols to be used in other SVGs within the document like this:
 
-```
+```xml
 <svg>
   <use xlink:href="#icon-unicorn"></use>
 </svg>
@@ -45,7 +45,7 @@ This is how to set it up with Vue:
 
 ## Install dependency
 
-```
+```bash
 npm i -D svg-symbol-sprite-loader
 ```
 
@@ -53,7 +53,7 @@ npm i -D svg-symbol-sprite-loader
 
 You will need a Webpack configuration which uses `html-webpack-loader`. This is necessary because the plugin uses a hook of html-webpack-loader to insert the filename of the generated sprite image into the HTML, to be picked up by the script which loads and caches it later.
 
-```
+```javascript
 const SVGSymbolSprite = require('svg-symbol-sprite-loader')
 
 module.exports = {
@@ -89,7 +89,7 @@ You can also consult the [official documentation][webpack-config] for this part.
 
 [svg-symbol-sprite-loader][svg-symbol-sprite-loader] already provides a function which you just need to call to fetch and cache the sprite image:
 
-```
+```javascript
 import svgSymbolSpriteLoader from 'svg-symbol-sprite-loader'
 
 svgSymbolSpriteLoader({ useCache: process.env.NODE_ENV === 'production' })
@@ -103,7 +103,7 @@ If you need to support IE, you can either import a [fetch polyfill][fetch-polyfi
 
 The Vue component should import all necessary icons and expose a simple API to include the icons anywhere needed. I did it like this:
 
-```
+```html
 <script>
   import unicorn from './icons/unicorn.svg'
   // ...more icons
@@ -146,7 +146,7 @@ The `style` tag is optional, but allows the icons to automatically inherit the c
 
 The usage within other components looks like this:
 
-```
+```html
 // import `Icon` component locally or global
 
 <Icon name="unicorn" />
@@ -167,7 +167,7 @@ When using Vue CLI you can't configure Webpack directly. But it allows you to ma
 
 Just create a `vue.config.js` file with the following content:
 
-```
+```javascript
 const path = require('path')
 const SVGSymbolSprite = require('svg-symbol-sprite-loader')
 

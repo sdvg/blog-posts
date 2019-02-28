@@ -212,5 +212,5 @@ Thanks to [Alex][alex] for reviewing this!
 [twitter]: https://twitter.com/sd_vg
 [github]: https://github.com/sdvg/blog-posts/
 [webpack-chain]: https://github.com/neutrinojs/webpack-chain
-[cli-demo]: https://github.com/sdvg/vue-cli-svg-symbol-sprite
+[cli-demo]: https://github.com/sdvg/vue-cli-svg-symbol-sprite-demo
 [alex]: https://github.com/alexanderstudte

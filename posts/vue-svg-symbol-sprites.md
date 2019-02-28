@@ -157,7 +157,7 @@ The usage within other components looks like this:
 If you don't want to load all SVGs using `svg-symbol-sprite-loader` I recommend to introduce a special file extension for icon SVGs like `.icon.svg`. Change the `test` regexes in the Webpack config like to this:
 
 Icon loader: `test: /\.icon\.svg$/,`  
-File loader: `test: /.((?<!icon.)svg|png|jpg|gif|ico|eot|ttf|woff2?)$/`
+File loader: `test: /.((?<!\.icon.)svg|png|jpg|gif|ico|eot|ttf|woff2?)$/`
 
 This uses a negative lookbehind operator which matches `*.svg` but not `*.icon.svg`.
 

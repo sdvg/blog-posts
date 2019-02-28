@@ -102,6 +102,8 @@ know how to do it.
 
 Perhaps I will give some updates here about the progress 🙂
 
+Thanks to [Ben][ben] for reviewing this!
+
 [web-crypto]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API
 [confluence]: https://www.atlassian.com/software/confluence
 [evernote]: https://evernote.com/
@@ -111,3 +113,4 @@ Perhaps I will give some updates here about the progress 🙂
 [pouchdb]: https://pouchdb.com/
 [tinymce]: https://www.tiny.cloud/
 [slate]: https://github.com/ianstormtaylor/slate
+[ben]: https://github.com/bamarch

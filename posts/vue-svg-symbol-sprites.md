@@ -211,3 +211,4 @@ Found an mistake in this post? Write me an issue or send a PR on GitHub: [sdvg/b
 [github]: https://github.com/sdvg/blog-posts/
 [webpack-chain]: https://github.com/neutrinojs/webpack-chain
 [cli-demo]: https://github.com/sdvg/vue-cli-svg-symbol-sprite
+[alex]: https://github.com/alexanderstudte
